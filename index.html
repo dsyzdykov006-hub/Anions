@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания по химии праздничного неба</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .hidden { display: none; }
+        .section { margin-bottom: 20px; }
+        img { max-width: 100%; height: auto; }
+        form { margin-top: 20px; }
+        label { display: block; margin-bottom: 10px; }
+        textarea { width: 100%; height: 150px; }
+    </style>
+</head>
+<body>
+    <h1>Задания по химии праздничного неба</h1>
+    <p>Выберите свое имя:</p>
+    <select id="name-select">
+        <option value="">-- Выберите --</option>
+        <option value="Арсен">Арсен</option>
+        <option value="Марат">Марат</option>
+        <option value="Ольга">Ольга</option>
+        <option value="Микола">Микола</option>
+    </select>
+
+    <!-- Контент для обычных учеников -->
+    <div id="regular-content" class="hidden">
+        <div class="section">
+            <h2>История</h2>
+            <p>Ко Дню Республики в городском парке готовили большой фейерверк. Пиротехники принесли в школу четыре образца порошков с кодами A, B, C и D. На коробках не было подписей, поэтому нужно было определить, какой из образцов даёт нужный цвет пламени. От правильной идентификации зависела цветовая последовательность праздничного салюта.</p>
+            <p>Школьникам разрешили провести только пробу на пламя: небольшое количество каждого образца нужно было нагреть на чистой проволоке в пламени горелки и записать наблюдения.</p>
+            <p>При испытании образца A пламя стало ярко-зелёным.</p>
+            <p>Образец B окрасил пламя в насыщенный красный.</p>
+            <p>Образец C дал жёлто-оранжевый оттенок, перекрывающий основной цвет пламени.</p>
+            <p>Образец D окрасил пламя в фиолетовый, заметный только при затемнении.</p>
+            <p>После записи результатов пиротехники сверили наблюдения школьников с техническим регламентом, где для каждого цвета указано, какой образец подходит. На основе этих данных заряды распределили по местам в салютной установке, чтобы праздничный фейерверк прошёл в нужной цветовой последовательности.</p>
+            <!-- Вставьте пути к изображениям из вашего GitHub репозитория -->
+            <img src="https://raw.githubusercontent.com/dsyzdykov006-hub/Anions/main/IMG_0600.jpeg" alt="Фейерверк">
+            <img src="https://raw.githubusercontent.com/dsyzdykov006-hub/Anions/main/IMG_0602.jpeg" alt="Баночки A B C D">
+            <img src="https://raw.githubusercontent.com/dsyzdykov006-hub/Anions/main/IMG_0603.jpeg" alt="Баночки с вопросами">
+            <img src="https://raw.githubusercontent.com/dsyzdykov006-hub/Anions/main/IMG_0604.jpeg" alt="Баночки с пламенем">
+        </div>
+
+        <div class="section">
+            <h2>Часть 1: Тестовые задания</h2>
+            <p>Ответьте на вопросы, выбрав правильный вариант.</p>
+
+            <label>Вопрос 1: Согласно результатам испытаний, какой цвет пламени дал образец B?</label>
+            <select id="q1">
+                <option value="">-- Выберите --</option>
+                <option value="а">а) Ярко-зелёный</option>
+                <option value="б">б) Насыщенный красный</option>
+                <option value="в">в) Жёлто-оранжевый</option>
+                <option value="г">г) Фиолетовый</option>
+            </select>
+
+            <label>Вопрос 2: Какой из образцов, скорее всего, на основе описанных наблюдений, даст самый яркий и заметный цвет в ночном небе, даже без затемнения?</label>
+            <select id="q2">
+                <option value="">-- Выберите --</option>
+                <option value="а">а) Образец A (ярко-зелёный)</option>
+                <option value="б">б) Образец B (насыщенный красный)</option>
+                <option value="в">в) Образец C (жёлто-оранжевый)</option>
+                <option value="г">г) Образец D (фиолетовый, заметный только при затемнении)</option>
+            </select>
+
+            <label>Вопрос 3: Пиротехники распределили заряды в салютной установке в последовательности: Красный -> Зелёный -> Жёлто-оранжевый. Какие образцы порошков (A, B, C, D) должны быть использованы для второго и третьего залпов в этой последовательности?</label>
+            <select id="q3">
+                <option value="">-- Выберите --</option>
+                <option value="а">а) Второй залп: A, третий залп: C</option>
+                <option value="б">б) Второй залп: B, третий залп: A</option>
+                <option value="в">в) Второй залп: C, третий залп: B</option>
+                <option value="г">г) Второй залп: D, третий залп: C</option>
+            </select>
+
+            <button id="check-test">Проверить и продолжить</button>
+        </div>
+
+        <div id="open-question" class="section hidden">
+            <h2>Часть 2: Открытый вопрос</h2>
+            <p id="open-q-text"></p>
+            <textarea id="open-answer"></textarea>
+        </div>
+    </div>
+
+    <!-- Контент для Миколы -->
+    <div id="special-content" class="hidden">
+        <div class="section">
+            <h2>Разноцветный салют</h2>
+            <p>Ко Дню Республики готовили салют. Были порошки: A, B, C, D.</p>
+            <p>Нужно узнать, какой цвет дает каждый порошок.</p>
+            <p>Провели опыты.</p>
+            <!-- Вставьте пути к изображениям из вашего GitHub репозитория -->
+            <img src="path/to/fireworks.jpg" alt="Фейерверк">
+            <img src="path/to/jars.jpg" alt="Баночки A B C D">
+            <img src="path/to/question-jars.jpg" alt="Баночки с вопросами">
+            <img src="path/to/flame-jars.jpg" alt="Баночки с пламенем">
+        </div>
+
+        <div class="section">
+            <h2>Задание 1: «Найди пару»</h2>
+            <p>Посмотри на баночки и на цвета. Соотнеси каждую баночку с цветом, который она дала.</p>
+            <label>Баночка A: <select id="match-a"><option value="">--</option><option value="Зелёный">Зелёный</option><option value="Красный">Красный</option><option value="Жёлтый">Жёлтый</option><option value="Фиолетовый">Фиолетовый</option></select></label>
+            <label>Баночка B: <select id="match-b"><option value="">--</option><option value="Зелёный">Зелёный</option><option value="Красный">Красный</option><option value="Жёлтый">Жёлтый</option><option value="Фиолетовый">Фиолетовый</option></select></label>
+            <label>Баночка C: <select id="match-c"><option value="">--</option><option value="Зелёный">Зелёный</option><option value="Красный">Красный</option><option value="Жёлтый">Жёлтый</option><option value="Фиолетовый">Фиолетовый</option></select></label>
+            <label>Баночка D: <select id="match-d"><option value="">--</option><option value="Зелёный">Зелёный</option><option value="Красный">Красный</option><option value="Жёлтый">Жёлтый</option><option value="Фиолетовый">Фиолетовый</option></select></label>
+        </div>
+
+        <div class="section">
+            <h2>Задание 2: «Собери салют»</h2>
+            <p>Давай соберем салют. Сначала должен быть КРАСНЫЙ залп, потом ЗЕЛЁНЫЙ, потом ЖЁЛТЫЙ. Разложи баночки по порядку.</p>
+            <label>Первый (Красный): <select id="order-1"><option value="">--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+            <label>Второй (Зелёный): <select id="order-2"><option value="">--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+            <label>Третий (Жёлтый): <select id="order-3"><option value="">--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+        </div>
+
+        <div class="section">
+            <h2>Задание 3: «Покажи и назови»</h2>
+            <p>Ответь на вопросы.</p>
+            <label>Какого цвета этот огонь? (Предполагаем красный) <input type="text" id="name-color"></label>
+            <label>Какая баночка дала красный огонь? <select id="name-jar"><option value="">--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+        </div>
+    </div>
+
+    <form id="submit-form" class="hidden">
+        <button type="button" id="submit-btn">Отправить результаты</button>
+    </form>
+
+    <script>
+        const nameSelect = document.getElementById('name-select');
+        const regularContent = document.getElementById('regular-content');
+        const specialContent = document.getElementById('special-content');
+        const submitForm = document.getElementById('submit-form');
+        const checkTestBtn = document.getElementById('check-test');
+        const openQText = document.getElementById('open-q-text');
+        const openQuestionDiv = document.getElementById('open-question');
+        const submitBtn = document.getElementById('submit-btn');
+
+        nameSelect.addEventListener('change', () => {
+            const name = nameSelect.value;
+            regularContent.classList.add('hidden');
+            specialContent.classList.add('hidden');
+            submitForm.classList.add('hidden');
+            if (name === 'Микола') {
+                specialContent.classList.remove('hidden');
+            } else if (name) {
+                regularContent.classList.remove('hidden');
+            }
+            if (name) {
+                submitForm.classList.remove('hidden');
+            }
+        });
+
+        checkTestBtn.addEventListener('click', () => {
+            const q1 = document.getElementById('q1').value;
+            const q2 = document.getElementById('q2').value;
+            const q3 = document.getElementById('q3').value;
+
+            if (!q1 || !q2 || !q3) {
+                alert('Ответьте на все вопросы!');
+                return;
+            }
+
+            let score = 0;
+            if (q1 === 'б') score++;
+            if (q2 === 'в') score++;
+            if (q3 === 'а') score++;
+
+            let question = '';
+            if (score <= 1) {
+                question = 'Опиши, как школьники проводили эксперимент, чтобы определить цвет пламени каждого образца. Почему для чистоты опыта важно использовать чистую проволоку?';
+            } else if (score === 2) {
+                question = 'Представь, что для завершения салюта нужен был яркий синий цвет, который дал бы образец E. Опиши, какие наблюдения за пламенем позволили бы сделать вывод, что этот цвет — именно синий, и он достаточно ярок для салюта.';
+            } else if (score === 3) {
+                question = 'Объясни, основываясь на тексте и своих знаниях, почему разные химические соединения (образцы порошков) окрашивают пламя в разные цвета. Какую фундаментальную научную концепцию демонстрирует этот эксперимент, и почему он был жизненно важен для успеха всего праздника?';
+            }
+
+            openQText.textContent = question;
+            openQuestionDiv.classList.remove('hidden');
+        });
+
+        submitBtn.addEventListener('click', () => {
+            const name = nameSelect.value;
+            let data = { name };
+
+            if (name !== 'Микола') {
+                data.q1 = document.getElementById('q1').value;
+                data.q2 = document.getElementById('q2').value;
+                data.q3 = document.getElementById('q3').value;
+                data.openAnswer = document.getElementById('open-answer').value;
+            } else {
+                data.matchA = document.getElementById('match-a').value;
+                data.matchB = document.getElementById('match-b').value;
+                data.matchC = document.getElementById('match-c').value;
+                data.matchD = document.getElementById('match-d').value;
+                data.order1 = document.getElementById('order-1').value;
+                data.order2 = document.getElementById('order-2').value;
+                data.order3 = document.getElementById('order-3').value;
+                data.nameColor = document.getElementById('name-color').value;
+                data.nameJar = document.getElementById('name-jar').value;
+            }
+
+            fetch('https://script.google.com/macros/s/AKfycbwOaWPRazGnzqUDcLaSgVRfWrZmKMLTf-1PHEESTJ5PAJjy2QHWojZnU4gNYNDVMeNzGQ/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(() => {
+                alert('Результаты отправлены!');
+            }).catch(() => {
+                alert('Ошибка отправки. Попробуйте позже.');
+            });
+        });
+    </script>
+</body>
+</html>
